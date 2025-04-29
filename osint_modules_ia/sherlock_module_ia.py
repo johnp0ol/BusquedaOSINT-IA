@@ -36,6 +36,7 @@ def verificar_enlace_contenido(url):
     except Exception:
         return False
 
+# Se coloca la ruta especifica donde se instaló sherlock
 def ejecutar_sherlock_ia(username, output_dir):
     print(f"[+] Ejecutando Sherlock con IA para: {username}")
     comando = ["/home/kali/.local/bin/sherlock", username, "--print-found"]
