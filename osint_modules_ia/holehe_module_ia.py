@@ -18,7 +18,7 @@ CATEGORIAS = {
     "Otro": ["personal", "juegos", "aplicaciones", "misc"]
 }
 
-# Se coloca la ruta especifica donde se instalo holehe, en este caso el servicio está virtualizado
+# Se coloca la ruta especifica donde se instaló holehe, en este caso el servicio está virtualizado
 def ejecutar_holehe_ia(correo, output_dir):
     print(f"[+] Ejecutando Holehe con IA para: {correo}")
     comando = ["/home/kali/holehe/venv-holele/bin/holehe", correo] 
