@@ -9,6 +9,7 @@ from collections import Counter
 import spacy
 import requests
 
+# Necesario colocar una API Key válida, en esta ocasión se encuentra una de prueba
 API_KEY = "8c12568bfccefd58504a6c83b4d1bc951e6eb3d56db6cdf8cfb6e2d2087778e0"
 modelo_ia = SentenceTransformer('all-MiniLM-L6-v2')
 nlp_spacy = spacy.load("en_core_web_sm")
@@ -138,7 +139,8 @@ def generar_grafico(query, resultados, output_dir):
 
     etiquetas = list(conteo.keys())
     valores = list(conteo.values())
-
+    
+    # Gráfico de barras
     plt.figure(figsize=(8, 6))
     plt.bar(etiquetas, valores)
     plt.title("SERPAPI - Resultados por Categoría (IA)")

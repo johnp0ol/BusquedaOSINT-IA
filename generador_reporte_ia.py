@@ -112,10 +112,10 @@ def generar_html_ia(email, serpapi_data, sherlock_data=None, maigret_data=None, 
 
         return html_bloque
 
-# BLOQUE HOLEHE
+# REPORTE PARA HOLEHE
     html += incluir_tabla_y_graficos(categorias_holehe, "Holehe")
     
-# BLOQUE HIBP
+# REPORTE PARA HIBP
     if categorias_hibp:
         html += f"<div class='categoria'><h2>[HIBP] Resultados agrupados por categoría ({total_hibp} filtraciones)</h2>"
         html += f"<div style='margin-bottom: 20px;'><h3>📌 Tipos de información detectada (interpretación)</h3><ul><li>📅 <strong>Fechas (DATE)</strong></li><li>🏢 <strong>Organizaciones (ORG)</strong></li><li>🧑 <strong>Personas (PERSON)</strong></li><li>📦 <strong>Productos o Servicios (PRODUCT)</strong></li><li>🔢 <strong>Números (CARDINAL)</strong></li><li>🌍 <strong>Lugares (GPE)</strong></li></ul></div>"
@@ -139,13 +139,13 @@ def generar_html_ia(email, serpapi_data, sherlock_data=None, maigret_data=None, 
             html += f"<div style='margin-top: 20px;'><h3>[HIBP] Distribución porcentual (gráfico circular)</h3><img src='grafico_hibp_pie_{safe_name}.png' style='max-width: 100%; border: 1px solid #ccc; padding: 10px;'></div>"
         html += "</div>"
 
-# BLOQUE MAIGRET
+# REPORTE PARA MAIGRET
     html += incluir_tabla_y_graficos(categorias_maigret, "Maigret")
 
-# BLOQUE SHERLOCK
+# REPORTE PARA SHERLOCK
     html += incluir_tabla_y_graficos(categorias_sherlock, "Sherlock")
     
-# BLOQUE DE TWITTER
+# REPORTE PARA TWITERIDFINDER
     if twitter_data:
         conf = twitter_data.get("confiabilidad", "")
         conf_str = {
@@ -170,7 +170,7 @@ def generar_html_ia(email, serpapi_data, sherlock_data=None, maigret_data=None, 
 <hr>
 """
 
-# BLOQUE SERPAPI
+# REPORTE PARA SERPAPI
     html += incluir_tabla_y_graficos(categorias_serp, "SerpAPI")
 
     html += "</body></html>"

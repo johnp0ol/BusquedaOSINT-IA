@@ -8,7 +8,7 @@ import numpy as np
 from collections import Counter
 import spacy
 
-# ⚠ Coloca tu API Key válida
+# Necesario colocar una API Key válida, en esta ocasión se encuentra una de prueba
 API_KEY = "cc1cd7d7a8fe4c47936dfdd31e65fe08"
 
 # Modelos de IA
@@ -39,17 +39,6 @@ def ejecutar_hibp_ia(correo, output_dir):
             resultados = procesar_brechas(brechas)
             guardar_resultados(correo, resultados, output_dir)
             generar_grafico(correo, resultados, output_dir)
-
-            # 🔥 Ya no generamos el gráfico de entidades
-            # generar_grafico_entidades(correo, resultados, output_dir)
-
-            # 🧹 Eliminamos el gráfico de entidades si existe
-            safe_name = correo.replace("@", "_").replace(".", "_")
-            ruta_ner = os.path.join(output_dir, f"grafico_entidades_ner_{safe_name}.png")
-            if os.path.exists(ruta_ner):
-                os.remove(ruta_ner)
-                print(f"[-] Gráfico NER eliminado: {ruta_ner}")
-
             return resultados
 
         elif response.status_code == 404:

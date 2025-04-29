@@ -25,7 +25,7 @@ def main():
     print("\n=== MODELO OSINT CON IA - TFM ===\n")
     objetivo = input("Introduce un correo o nombre de usuario: ").strip()
 
-    # Crear carpeta única para esta búsqueda
+    # Crea carpeta unica para cada busqueda
     ruta_resultados = crear_directorio_resultados(objetivo)
 
     resultado_serpapi_ia = []
@@ -63,7 +63,7 @@ def main():
         else:
             print("✖ No se pudo obtener el Twitter ID.")
 
-    # Generar reporte HTML con todos los resultados
+    # Genera reporte HTML con todos los resultados
     generar_html_ia(
         email=objetivo,
         serpapi_data=resultado_serpapi_ia,
