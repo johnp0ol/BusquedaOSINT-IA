@@ -40,7 +40,7 @@ Utiliza herramientas OSINT especializadas y modelos de IA para:
 ## ⚙️ Requisitos
 
 - Python 3.11.2 (recomendado)
-- Linux (Kali 2025.1)
+- Linux (Kali 2023.1)
 - Librerías:
   - `sentence-transformers`
   - `scikit-learn`
