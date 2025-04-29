@@ -10,7 +10,7 @@ import spacy
 import requests
 
 # Necesario colocar una API Key válida, en esta ocasión se encuentra una de prueba
-API_KEY = "8c12568bfccefd58504a6c83b4d1bc951e6eb3d56db6cdf8cfb6e2d2087778e0"
+API_KEY = "04ced18a02ea01c60eeae158b1f7603a39a00b57ec53050222ee3977752dc0cd"
 modelo_ia = SentenceTransformer('all-MiniLM-L6-v2')
 nlp_spacy = spacy.load("en_core_web_sm")
 
