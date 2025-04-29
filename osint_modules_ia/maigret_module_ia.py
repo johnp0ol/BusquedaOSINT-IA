@@ -37,9 +37,10 @@ def verificar_enlace_contenido(url):
     except:
         return False
 
+# Se coloca la ruta especifica donde se instaló maigret
 def ejecutar_maigret_ia(username, output_dir):
     print(f"[+] Ejecutando Maigret con IA para: {username}")
-
+    
     comando = [
         "/home/kali/.local/bin/maigret",
         username,
